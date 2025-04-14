@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
+        app:itemIconTint="@color/green"
+        app:itemTextColor="@color/green"
         android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,5 +32,75 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
+    <ImageView
+        android:id="@+id/background_tree"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_account_tree_24"
+        android:scaleType="centerCrop"
+        android:alpha="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bejelentkezés"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/green"/>
 
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/green"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_title" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Jelszó"
+        android:textColorHint="@color/green"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_input" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bejelentkezés"
+        app:layout_constraintTop_toBottomOf="@id/password_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/green"/>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Regisztráció"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/green"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

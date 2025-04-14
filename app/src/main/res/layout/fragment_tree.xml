@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-
+    android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -45,64 +43,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <TextView
-        android:id="@+id/login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
+        android:layout_marginTop="4dp"
+        android:text="Családfa"
+        android:textColor="@color/green"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/green"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/email_input"
-        android:layout_width="0dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/green"
-        android:minHeight="48dp"
+        android:text="itt fog megjelleni Családfa"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_title" />
-
-    <EditText
-        android:id="@+id/password_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Jelszó"
-        android:textColorHint="@color/green"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_input" />
-
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
-        app:layout_constraintTop_toBottomOf="@id/password_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/green"/>
-
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Regisztráció"
-        app:layout_constraintTop_toBottomOf="@id/login_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/green"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
